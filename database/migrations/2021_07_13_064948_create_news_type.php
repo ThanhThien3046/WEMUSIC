@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSubCategory extends Migration
+class CreateNewsType extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateSubCategory extends Migration
      */
     public function up()
     {
-        Schema::create('sub_category', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('title', 150);
+        Schema::create('news_type', function (Blueprint $table) {
+            $table->Increments('news_type_id');
+            $table->string('news_type_name', 150);
             $table->string('background')->nullable();
-            $table->bigInteger('category_id');
-            $table->timestamps();
+            $table->string('news_id');
+            $table->timestamp('created_at')->nullable();
         });
     }
 
@@ -29,6 +29,6 @@ class CreateSubCategory extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sub_category');
+        Schema::dropIfExists('news_type');
     }
 }
