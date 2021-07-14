@@ -14,13 +14,13 @@ class CreateTeachers extends Migration
     public function up()
     {
         Schema::create('teachers', function (Blueprint $table) {
-            $table->Increments('teachers_id');
+            $table->Increments('id');
             $table->string('musical_instrument');
             $table->string('address');
             $table->string('incharge_address');
             $table->string('fee');
             $table->string('background')->nullable();
-            $table->string('story');
+            $table->text('story');
             $table->string('student_id');
             $table->timestamp('created_at')->nullable();
         });

@@ -14,7 +14,7 @@ class CreateCourseType extends Migration
     public function up()
     {
         Schema::create('course_type', function (Blueprint $table) {
-            $table->Increments('course_type_id');
+            $table->Increments('id');
             $table->string('course_type_name');
             $table->string('background')->nullable();
             $table->bigInteger('course_id');
