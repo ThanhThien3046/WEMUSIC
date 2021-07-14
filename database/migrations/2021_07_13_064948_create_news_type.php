@@ -14,7 +14,7 @@ class CreateNewsType extends Migration
     public function up()
     {
         Schema::create('news_type', function (Blueprint $table) {
-            $table->Increments('news_type_id');
+            $table->Increments('id');
             $table->string('news_type_name', 150);
             $table->string('background')->nullable();
             $table->string('news_id');
